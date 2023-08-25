@@ -431,7 +431,7 @@ function App() {
           <img src={PabloToken} />
           <div>
             <a href='https://twitter.com/mafiaerc20' target={"_blank"} rel="noreferrer"><img src={Twitter} className="social" /></a>
-            <a href="https://t.me/+0_EohigtzrM5ZGU0" target={"_blank"} rel="noreferrer"><img src={Telegram} className="social" /></a>
+            <a href="https://t.me/mafiaerc20" target={"_blank"} rel="noreferrer"><img src={Telegram} className="social" /></a>
           </div>
         </footer>
       </div>

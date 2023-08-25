@@ -144,17 +144,20 @@
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       border-radius: 10px;
-      gap:10%;
+      gap: 10%;
       border: 1px solid rgba(255, 255, 255, 0.18);
+
       @media screen and (max-width:768px) {
         flex-wrap: wrap;
       }
 
-      span, p {
+      span,
+      p {
         margin: 0 10px;
         font-weight: 700;
         font-size: 1rem;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
         @media screen and (max-width:768px) {
           font-size: 0.8rem;
         }
@@ -165,10 +168,11 @@
         color: white;
         font-weight: 700;
         font-size: 1rem;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding: 1rem;
         background-color: gray;
         border-radius: 12px;
+
         @media screen and (max-width:768px) {
           font-size: 0.8rem;
         }
@@ -179,6 +183,7 @@
     h2 {
       font-size: 3rem;
       margin-top: 5rem;
+
       @media screen and (max-width:768px) {
         font-size: 1.2rem;
         white-space: pre-wrap;
@@ -332,8 +337,6 @@
           font-weight: 600;
           width: 50rem;
 
-          // text-align: justify;
-          // text-justify: inter-word;
           @media screen and (max-width:768px) {
             font-size: 1.2rem;
             text-align: center;

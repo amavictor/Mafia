@@ -178,16 +178,16 @@ function App() {
     requestAnimationFrame(raf)
   }, [])
 
-  const copyToClipboard = () => {
-    const walletAddress = document.getElementById('walletAddress');
-    const textarea = document.createElement('textarea');
-    textarea.value = walletAddress.textContent;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    alert('Wallet address copied to clipboard!');
-  };
+  // const copyToClipboard = () => {
+  //   const walletAddress = document.getElementById('walletAddress');
+  //   const textarea = document.createElement('textarea');
+  //   textarea.value = walletAddress.textContent;
+  //   document.body.appendChild(textarea);
+  //   textarea.select();
+  //   document.execCommand('copy');
+  //   document.body.removeChild(textarea);
+  //   alert('Wallet address copied to clipboard!');
+  // };
 
 
   return (
@@ -430,8 +430,8 @@ function App() {
           <h4>Contact us</h4>
           <img src={PabloToken} />
           <div>
-            <a href='https://twitter.com/mrjoker_erc20?t=O5GAFh4SI5kULtkcQBkEaQ&s=09' target={"_blank"} rel="noreferrer"><img src={Twitter} className="social" /></a>
-            <a href="https://t.me/mrjokertoken" target={"_blank"} rel="noreferrer"><img src={Telegram} className="social" /></a>
+            <a href='https://twitter.com/mafiaerc20' target={"_blank"} rel="noreferrer"><img src={Twitter} className="social" /></a>
+            <a href="https://t.me/+0_EohigtzrM5ZGU0" target={"_blank"} rel="noreferrer"><img src={Telegram} className="social" /></a>
           </div>
         </footer>
       </div>

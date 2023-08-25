@@ -145,7 +145,7 @@ function App() {
     labels: ["Liquidity Pool", "Marketing Wallet"],
     datasets: [{
       label: "Poll",
-      data: [50, 50],
+      data: [90, 10],
       backgroundColor: ["rgba(40, 67, 135, 1)", "rgba(255,0,0,0.3)"],
       hoverBackgroundColor: ["blue", "rgba(255,0,0,1)"],
       borderColor: "black"
@@ -178,6 +178,17 @@ function App() {
     requestAnimationFrame(raf)
   }, [])
 
+  const copyToClipboard = () => {
+    const walletAddress = document.getElementById('walletAddress');
+    const textarea = document.createElement('textarea');
+    textarea.value = walletAddress.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Wallet address copied to clipboard!');
+  };
+
 
   return (
     <ReactLenis root>
@@ -186,7 +197,6 @@ function App() {
           <img src={Pablo} alt="Pablo" />
           <div className="light" />
           <nav>
-
             <ul className={`${isMenuOpen ? 'show' : ''}`}>
               <div className={`close-button ${isMenuOpen && "show-cancel"}`} onClick={toggleMenu}>
                 &#10005;
@@ -213,13 +223,11 @@ function App() {
               <div className='hamburger' />
               <div className='hamburger' />
             </div>
-
-
           </nav>
 
           <div className='title'>
             <div className='title-text'>
-              $PABLO
+              $MAFIA
             </div>
             <h2>The only thing a man with money wants, is more money</h2>
             <img src={PabloToken} />
@@ -227,6 +235,13 @@ function App() {
             <img src={PabloToken} />
             <img src={PabloToken} />
             <img src={PabloToken} />
+            {/* <div className='wallet'>
+              <span>Wallet Address:</span>
+              <p id="walletAddress">0x00020384583748FDGH</p>
+              <div onClick={copyToClipboard}>
+                COPY
+              </div>
+            </div> */}
           </div>
         </div>
 
@@ -237,17 +252,17 @@ function App() {
           <img className='green-light4' src={GreenLight2} />
 
           <div id='about-section' ref={aboutSection}>
-            <h3>About $PABLO</h3>
+            <h3>About $MAFIA</h3>
             <div className='about-details'>
-              <p>$PABLO is an ERC20 token designed to capture the essence of the infamous
+              <p>$MAFIA is an ERC20 token designed to capture the essence of the infamous
                 drug lord, PABLO ESCOBAR. With a twist of grand theft and mischief,
-                this meme coin aims to bring you and entertainment to the cryptocurrency world.
+                this meme coin aims to bring you, and entertainment to the cryptocurrency world.
               </p>
               <img src={PabloToken} />
             </div>
 
             <div id="how-to-buy" ref={howToBuy}>
-              <h3>How to buy $PABLO</h3>
+              <h3>How to buy $MAFIA</h3>
               <div className='how-to-buy-details'>
                 {/* <img src={MockUp} /> */}
 
@@ -263,7 +278,7 @@ function App() {
                 <div className='card'>
                   <div className='card-details'>
                     <h4>Get some Eth</h4>
-                    <p>Have ETH in your wallet to switch to <span>$PABLO.</span>If you don’t have any ETH, you can buy directly on metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.</p>
+                    <p>Have ETH in your wallet to switch to <span>$MAFIA.</span>If you don’t have any ETH, you can buy directly on metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.</p>
                   </div>
                   <img src={Pablo2} className="card-image" />
                 </div>
@@ -271,15 +286,15 @@ function App() {
                 <div className='card'>
                   <div className='card-details'>
                     <h4>Go to Uniswap</h4>
-                    <p>Connect to Uniswap. Go to app.uniswap.org in google chrome or on the browser inside your Metamask app. Connect your wallet. Paste the <span>$PABLO</span> token address into Uniswap, select $PABLO, and confirm. When Metamask prompts you for a wallet signature, sign.</p>
+                    <p>Connect to Uniswap. Go to app.uniswap.org in google chrome or on the browser inside your Metamask app. Connect your wallet. Paste the <span>$MAFIA</span> token address into Uniswap, select $MAFIA, and confirm. When Metamask prompts you for a wallet signature, sign.</p>
                   </div>
                   <img src={Pablo3} className="card-image" />
                 </div>
 
                 <div className='card'>
                   <div className='card-details'>
-                    <h4>Switch Eth for $PABLO</h4>
-                    <p>Switch ETH for <span>$PABLO</span>. with our low taxes, you should have no problems, but you may need to use slippage during times of market volatility.</p>
+                    <h4>Switch Eth for $MAFIA</h4>
+                    <p>Switch ETH for <span>$MAFIA</span>. with our low taxes, you should have no problems, but you may need to use slippage during times of market volatility.</p>
                   </div>
                   <img src={Pablo4} className="card-image" />
                 </div>
@@ -288,11 +303,12 @@ function App() {
 
             </div>
 
+
             <div id='tokenomics' ref={tokenNomics}>
               <h3>Tokenomics</h3>
               <div className='tokenomics-details'>
                 <div>
-                  <h5>Token supply: 1,000,000</h5>
+                  <h5>Token supply: 1,000,000,000</h5>
                 </div>
                 <div className='chart'>
                   <Doughnut
@@ -308,14 +324,14 @@ function App() {
             <div id="roadmap" ref={roadMap}>
               <h3>Roadmap</h3>
               <div className='description'>
-                <p>All jokes aside, here is a rough sketch of $PABLO path ahead.
+                <p>All jokes aside, here is a rough sketch of $MAFIA path ahead.
                   We dont want to give everything away on day 1 😁
                 </p>
 
                 <div className='roadmap-card-container'>
                   <div className='roadmap-card'>
                     <h4>Phase 1</h4>
-                    <p>Pablo</p>
+                    <p>$MAFIA</p>
                   </div>
                   <hr />
                   <div className='roadmap-card'>
@@ -325,7 +341,7 @@ function App() {
                   <hr />
                   <div className='roadmap-card'>
                     <h4>Phase 3</h4>
-                    <p>Pablo Takeover</p>
+                    <p>$MAFIA Takeover</p>
                   </div>
                 </div>
               </div>

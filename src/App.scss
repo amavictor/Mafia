@@ -69,25 +69,27 @@
 
     .hamburger-container {
       display: none;
+
       .hamburger {
         height: 0.3rem;
         width: 2.2rem;
         margin-bottom: 0.5rem;
         background-color: white;
       }
+
       @media screen and (max-width:768px) {
         display: block;
       }
     }
 
-    .close-button{
+    .close-button {
       font-size: 3rem;
       color: white;
       font-weight: 700;
       display: none;
     }
 
-    .show-cancel{
+    .show-cancel {
       display: block;
     }
 
@@ -131,9 +133,52 @@
     align-items: center;
     flex-direction: column;
 
+    .wallet {
+      margin-top: 2rem;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      gap:10%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      @media screen and (max-width:768px) {
+        flex-wrap: wrap;
+      }
+
+      span, p {
+        margin: 0 10px;
+        font-weight: 700;
+        font-size: 1rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @media screen and (max-width:768px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      div {
+        border: 1px solid white;
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        background-color: gray;
+        border-radius: 12px;
+        @media screen and (max-width:768px) {
+          font-size: 0.8rem;
+        }
+
+      }
+    }
+
     h2 {
       font-size: 3rem;
-
+      margin-top: 5rem;
       @media screen and (max-width:768px) {
         font-size: 1.2rem;
         white-space: pre-wrap;
@@ -301,6 +346,7 @@
           width: 30%;
           height: 30%;
           animation: levitate 2s 1s ease-in-out infinite alternate;
+          object-fit: contain;
 
           @media screen and (max-width:768px) {
             width: 10rem;
@@ -323,7 +369,6 @@
 
   #how-to-buy {
     margin-top: 10%;
-
     background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.2)), url("https://i.pinimg.com/736x/51/c3/75/51c37517b25f2a77e0202c2aeda50f4f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -345,7 +390,7 @@
     img {
       width: 50rem;
       height: 50rem;
-      object-fit: contain;
+      object-fit: cover;
 
     }
   }
@@ -411,8 +456,8 @@
         height: 60%;
       }
     }
-
   }
+
 
 
   #roadmap {
@@ -507,7 +552,7 @@
         left: 50%;
         transform: translateX(-50%);
       }
-      
+
 
       &::after {
         bottom: 0;
@@ -529,8 +574,7 @@
       align-items: center;
       min-height: 300px;
 
-      @media screen and (min-device-width: 900px)
-      and (max-device-width: 2050px) {
+      @media screen and (min-device-width: 900px) and (max-device-width: 2050px) {
         max-width: 80% !important;
         min-width: 80% !important;
 
@@ -544,8 +588,7 @@
           transform: translateX(35%);
         }
 
-        @media screen and (min-device-width: 900px)
-        and (max-device-width: 2050px) {
+        @media screen and (min-device-width: 900px) and (max-device-width: 2050px) {
           transform: translateX(30%);
           max-width: 30rem !important;
           min-width: 30rem !important;
@@ -563,8 +606,8 @@
         @media screen and (max-width:768px) {
           transform: translateX(-35%);
         }
-        @media screen and (min-device-width: 900px)
-        and (max-device-width: 2050px) {
+
+        @media screen and (min-device-width: 900px) and (max-device-width: 2050px) {
           transform: translateX(-30%);
           max-width: 30rem !important;
           min-width: 30rem !important;
@@ -594,7 +637,7 @@
           background: rgba(0, 0, 0, 1) !important;
 
         }
-       
+
 
         h5 {
           font-size: 2rem;
@@ -606,7 +649,7 @@
         }
 
         // ul {
-          
+
 
         li {
           font-family: 'Roboto', sans-serif;

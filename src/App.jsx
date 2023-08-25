@@ -256,7 +256,7 @@ function App() {
             <div className='about-details'>
               <p>$MAFIA is an ERC20 token designed to capture the essence of the infamous
                 drug lord, PABLO ESCOBAR. With a twist of grand theft and mischief,
-                this meme coin aims to bring you, and entertainment to the cryptocurrency world.
+                this meme coin aims to bring you mafia vibes, and entertainment to the cryptocurrency world.
               </p>
               <img src={PabloToken} />
             </div>

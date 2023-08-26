@@ -178,16 +178,16 @@ function App() {
     requestAnimationFrame(raf)
   }, [])
 
-  // const copyToClipboard = () => {
-  //   const walletAddress = document.getElementById('walletAddress');
-  //   const textarea = document.createElement('textarea');
-  //   textarea.value = walletAddress.textContent;
-  //   document.body.appendChild(textarea);
-  //   textarea.select();
-  //   document.execCommand('copy');
-  //   document.body.removeChild(textarea);
-  //   alert('Wallet address copied to clipboard!');
-  // };
+  const copyToClipboard = () => {
+    const walletAddress = document.getElementById('walletAddress');
+    const textarea = document.createElement('textarea');
+    textarea.value = walletAddress.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Wallet address copied to clipboard!');
+  };
 
 
   return (
@@ -235,13 +235,13 @@ function App() {
             <img src={PabloToken} />
             <img src={PabloToken} />
             <img src={PabloToken} />
-            {/* <div className='wallet'>
+            <div className='wallet'>
               <span>Wallet Address:</span>
-              <p id="walletAddress">0x00020384583748FDGH</p>
+              <p id="walletAddress">0x921bfabc80e240b6e0780de1471110c7be77d4e7</p>
               <div onClick={copyToClipboard}>
                 COPY
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
 
